@@ -466,8 +466,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
     <form class="inq" id="inq" novalidate>
       <label>Your name<input name="name" required autocomplete="name" placeholder="Jane Smith"></label>
       <label>Email<input name="email" type="email" required autocomplete="email" placeholder="jane@business.com"></label>
-      <label class="full" id="otherWrap" hidden>Tell me what you need<input name="other" id="otherInput" placeholder="For example: packaging only, a rebrand, a menu, social media templates"></label>
-      <label class="full">Business name<input name="business" placeholder="What's your business called?"></label>
+      <label><span>Phone number <span style="font-weight:400;opacity:.7">(optional)</span></span><input name="phone" type="tel" autocomplete="tel" placeholder="+1 555 123 4567"></label>
+      <label>Business name<input name="business" placeholder="What's your business called?"></label>
       <label>What do you need?<select name="package">
         <option>Not sure yet</option>
         <option>Logo Essentials (from $300)</option>
@@ -478,6 +478,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
       <label>When do you need it?<select name="timeline">
         <option>Flexible</option><option>Within 2 weeks</option><option>Within a month</option><option>In 1 to 3 months</option>
       </select></label>
+      <label class="full" id="otherWrap" hidden>Tell me what you need<input name="other" id="otherInput" placeholder="For example: packaging only, a rebrand, a menu, social media templates"></label>
       <label class="full">Tell me about your business<textarea name="message" required placeholder="What you sell, who your customers are, and anything you already have (a name, colours you like, an old logo)."></textarea></label>
       <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="full"><button class="btn violet" type="submit" id="sendBtn">Send inquiry <span class="arr">→</span></button></div>
@@ -578,11 +579,12 @@ form.addEventListener('submit',async e=>{
   if(!d.name.trim()||!/^\S+@\S+\.\S+$/.test(d.email)||!d.message.trim()){
     st.className='status err';st.textContent='Please add your name, a valid email and a few words about your business.';return;
   }
-  const body=`Name: ${d.name}\nEmail: ${d.email}\nBusiness: ${d.business||'-'}\nPackage: ${d.package}\nTimeline: ${d.timeline}\n\n${d.message}`;
+  if(d.phone&&d.phone.trim()&&!/^[+\d][\d\s().-]{6,}$/.test(d.phone.trim())){st.className='status err';st.textContent='Please check your phone number, or leave it empty.';return;}
+  const body=`Name: ${d.name}\nEmail: ${d.email}\nPhone: ${d.phone||'-'}\nBusiness: ${d.business||'-'}\nPackage: ${d.package}\nTimeline: ${d.timeline}\n\n${d.message}`;
   sendBtn.disabled=true;sendBtn.firstChild.textContent='Sending... ';
   try{
     const r=await fetch('https://formsubmit.co/ajax/'+EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({name:d.name,email:d.email,business:d.business,package:d.package,timeline:d.timeline,message:d.message,_subject:'New inquiry from '+d.name+' (Marcelix Design House)',_template:'table'})});
+      body:JSON.stringify({name:d.name,email:d.email,phone:d.phone||'-',business:d.business,package:d.package,timeline:d.timeline,message:d.message,_subject:'New inquiry from '+d.name+' (Marcelix Design House)',_template:'table'})});
     const j=await r.json().catch(()=>({}));
     if(!r.ok||j.success===false||j.success==='false')throw new Error('fail');
     st.className='status ok';st.textContent='Thanks '+d.name.split(' ')[0]+', your inquiry was sent. You will get a reply by email.';
