@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcelix Design House | Brand Identity Design</title>
+<meta name="description" content="Marcelix Design House: brand identity design for small businesses: logos, colour and type systems, packaging, stationery and social kits, with photo-realistic 3D mockups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>(function(){var t;try{t=localStorage.getItem('mx-theme')}catch(e){}if(!t){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();</script>
+<style>
+:root{
+  --paper:#F4F1EA; --paper2:#EAE5DA; --ink:#141210; --muted:#5E5850; --line:#D6CFC2;
+  --violet:#5B3DF5; --lilac:#E4DDFF; --white:#FFFFFF;
+  --r:22px;
+  --card:#FFFFFF; --body:#3A352F; --navbg:rgba(244,241,234,.86); --mq:#E4DDFF; --dark:#141210; --onDark:#F4F1EA; --field:#FFFFFF;
+}
+[data-theme="dark"]{
+  --paper:#0F0E0D; --paper2:#1A1816; --ink:#F2EEE6; --muted:#A59E92; --line:#2C2925;
+  --card:#181614; --body:#D3CCC0; --navbg:rgba(15,14,13,.86); --mq:#1E1844; --lilac:#C9BEFF; --dark:#1A1816; --field:#121110;
+}
+html{color-scheme:light}[data-theme="dark"]{color-scheme:dark}
+body{transition:background .35s,color .35s}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.display{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:850;text-transform:uppercase;letter-spacing:-.01em;line-height:.92}
+.serif{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:0}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink);transition:transform .2s,background .2s,color .2s;cursor:pointer;background:none;font-family:inherit;color:var(--ink)}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn.violet{background:var(--violet);border-color:var(--violet);color:#fff}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+/* ticker bar */
+.topbar{background:var(--dark);color:var(--onDark);font-size:13px;letter-spacing:.06em;overflow:hidden;white-space:nowrap}
+.topbar .track{display:inline-flex;gap:48px;padding:10px 0;animation:slide 40s linear infinite}
+.topbar span::before{content:"✦";color:var(--violet);margin-right:14px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:var(--navbg);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font-family:Archivo,sans-serif;font-stretch:125%;font-weight:900;font-size:19px;text-decoration:none;letter-spacing:.02em}
+.logo b{color:var(--violet)}
+.links{display:flex;gap:30px;font-size:15px;font-weight:500}
+.links a{text-decoration:none;position:relative}
+.links a::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:var(--violet);transition:right .25s}
+.links a:hover::after{right:0}
+nav .btn{padding:11px 20px}
+.burger{display:none;background:none;border:0;font-size:26px;cursor:pointer}
+
+/* hero */
+.hero{padding:56px 0 40px;position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:9px 16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;margin-top:28px}
+.hero h1{font-size:clamp(44px,5.6vw,84px)}
+.hero h1 .serif{color:var(--violet);font-size:1.08em;display:inline-block;transform:translateY(.04em)}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:520px;margin:26px 0 32px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.facts{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap}
+.facts div{font-size:14px;color:var(--muted)}
+.facts strong{display:block;font-family:Archivo,sans-serif;font-stretch:118%;font-weight:850;font-size:30px;color:var(--ink);line-height:1.1}
+.stack{position:relative;height:560px}
+.stack figure{position:absolute;border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -20px rgba(20,18,16,.35);transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.stack figure img{width:100%;height:100%;object-fit:cover}
+.stack .a{width:62%;height:62%;left:0;top:4%;transform:rotate(-5deg)}
+.stack .b{width:58%;height:56%;right:0;top:0;transform:rotate(4deg)}
+.stack .c{width:66%;height:52%;left:18%;bottom:0;transform:rotate(-1deg)}
+.stack:hover .a{transform:rotate(-8deg) translate(-12px,-6px)}
+.stack:hover .b{transform:rotate(7deg) translate(12px,-8px)}
+.stack:hover .c{transform:rotate(0) translateY(10px)}
+.sticker{position:absolute;right:4%;bottom:12%;z-index:3;width:120px;height:120px;border-radius:50%;background:var(--violet);color:#fff;display:grid;place-items:center;text-align:center;font-family:Archivo,sans-serif;font-stretch:118%;font-weight:850;font-size:13px;line-height:1.1;text-transform:uppercase;animation:spin 18s linear infinite}
+.sticker span{animation:spin 18s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* marquee */
+.marquee{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);overflow:hidden;white-space:nowrap;margin-top:40px;background:var(--mq)}
+.marquee .track{display:inline-flex;animation:slide 32s linear infinite;padding:18px 0}
+.marquee span{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:850;text-transform:uppercase;font-size:30px;padding:0 26px}
+.marquee span.s{font-family:"Instrument Serif",serif;font-style:italic;text-transform:none;font-weight:400;font-size:34px;color:var(--violet)}
+
+section{padding:110px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:46px}
+.sec-head h2{font-size:clamp(40px,5.6vw,78px)}
+.sec-head h2 .serif{color:var(--violet)}
+.sec-head p{color:var(--muted);font-size:18px;max-width:460px;justify-self:end}
+
+/* work */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.filters button{border:1.5px solid var(--ink);background:none;border-radius:999px;padding:10px 18px;font:500 14px Inter,sans-serif;cursor:pointer;color:var(--ink);transition:background .2s,color .2s}
+.filters button.on,.filters button:hover{background:var(--ink);color:var(--paper)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.card{text-decoration:none;display:block;transition:opacity .35s,transform .35s}
+.card.hide{display:none}
+.card .img{border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;background:var(--paper2);position:relative}
+.card .img img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .5s}
+.card .img img.alt{position:absolute;inset:0;opacity:0}
+.card:hover .img img{transform:scale(1.04)}
+.card:hover .img img.alt{opacity:1}
+.card .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;gap:14px}
+.card h3{font-family:Archivo,sans-serif;font-stretch:112%;font-weight:800;font-size:24px;text-transform:uppercase}
+.card .tag{font-size:14px;color:var(--muted)}
+.card .go{font-size:14px;font-weight:600;white-space:nowrap}
+.card .go::after{content:" ↗"}
+.note{margin-top:30px;font-size:14px;color:var(--muted)}
+
+/* explorer */
+.explorer{background:var(--dark);color:var(--onDark);border:1px solid var(--line);border-radius:34px;padding:56px;margin:0 28px}
+.explorer .sec-head p{color:#B9B2A6}
+.explorer .eyebrow{color:#B9B2A6}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.tabs button{background:none;border:1.5px solid #4A453F;color:var(--onDark);border-radius:999px;padding:10px 18px;font:500 14px Inter,sans-serif;cursor:pointer;transition:all .2s}
+.tabs button.on{background:var(--onDark);color:#141210;border-color:var(--onDark)}
+.ex{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:36px;align-items:stretch}
+.ex .shot{border-radius:var(--r);overflow:hidden;background:#222;aspect-ratio:4/3;align-self:start}
+.ex .shot img{width:100%;height:100%;object-fit:cover;animation:fade .6s ease}
+@keyframes fade{from{opacity:0;transform:scale(1.02)}to{opacity:1;transform:none}}
+.ex .info{display:flex;flex-direction:column;gap:22px}
+.ex h3{font-size:44px}
+.ex .ind{color:#B9B2A6;font-size:15px;margin-top:6px}
+.ex .idea{font-size:18px;color:#E5DFD4}
+.sw{display:flex;gap:10px}
+.sw button{flex:1;height:86px;border-radius:14px;border:1px solid rgba(255,255,255,.12);cursor:pointer;display:flex;align-items:flex-end;padding:8px;font:600 11px Inter,sans-serif;letter-spacing:.04em;transition:transform .2s}
+.sw button:hover{transform:translateY(-4px)}
+.lbl{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8F887D;font-weight:600;margin-bottom:10px}
+.fonts{display:flex;gap:10px;flex-wrap:wrap}
+.fonts span{border:1px solid #4A453F;border-radius:10px;padding:8px 12px;font-size:14px}
+.ex .logo-img{border-radius:14px;overflow:hidden}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,80px);background:var(--violet);color:#fff;padding:12px 20px;border-radius:999px;font-weight:600;font-size:14px;transition:transform .3s;z-index:99}
+.toast.show{transform:translate(-50%,0)}
+
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:60px;align-items:center}
+.mono{aspect-ratio:4/5;border-radius:34px;background:var(--violet);color:#fff;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:34px}
+.mono .big{font-family:Archivo,sans-serif;font-stretch:125%;font-weight:900;font-size:clamp(110px,14vw,190px);line-height:.8;letter-spacing:-.02em}
+.mono .big .serif{font-size:1.05em;color:var(--lilac)}
+.mono .tagline{font-size:15px;opacity:.9;max-width:240px}
+.mono .ring{position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;border:1.5px solid rgba(255,255,255,.35)}
+.mono .ring.two{right:-20px;top:-20px;width:160px;height:160px}
+.about h2{font-size:clamp(40px,5.2vw,72px)}
+.about h2 .serif{color:var(--violet)}
+.about .body p{font-size:18.5px;color:var(--body);margin-top:20px;max-width:620px}
+.about .body p:first-of-type{margin-top:26px}
+.beliefs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.beliefs div{border-top:1.5px solid var(--ink);padding-top:14px}
+.beliefs b{display:block;font-family:Archivo,sans-serif;font-stretch:112%;font-weight:800;text-transform:uppercase;font-size:16px}
+.beliefs span{font-size:14.5px;color:var(--muted)}
+@media (max-width:980px){.about{grid-template-columns:1fr}.mono{aspect-ratio:auto;min-height:340px}.beliefs{grid-template-columns:1fr}}
+
+/* theme toggle */
+.tgl{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:none;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:transform .3s,background .2s}
+.tgl:hover{transform:rotate(-20deg)}
+.tgl svg{width:19px;height:19px}
+.tgl .sun{display:none}[data-theme="dark"] .tgl .sun{display:block}[data-theme="dark"] .tgl .moon{display:none}
+.navr{display:flex;align-items:center;gap:12px}
+
+/* inquiry form */
+.contact{text-align:left!important}
+.cgrid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:50px;align-items:start}
+.cgrid h2{font-size:clamp(44px,6vw,92px)}
+.cgrid .side p{margin:22px 0 28px;font-size:18px;opacity:.92;max-width:440px}
+.direct{display:grid;gap:12px;margin-top:8px}
+.direct a,.direct button{color:#fff}
+form.inq{background:var(--card);color:var(--ink);border-radius:26px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form.inq .full{grid-column:1/-1}
+form.inq [hidden]{display:none}
+form.inq label{display:grid;gap:7px;font-size:13px;font-weight:600;letter-spacing:.04em}
+form.inq input,form.inq select,form.inq textarea{width:100%;font:400 16px Inter,sans-serif;color:var(--ink);background:var(--field);border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;outline:none;transition:border-color .2s,box-shadow .2s}
+form.inq textarea{min-height:120px;resize:vertical}
+form.inq input:focus,form.inq select:focus,form.inq textarea:focus{border-color:var(--violet);box-shadow:0 0 0 4px rgba(91,61,245,.15)}
+form.inq .btn{justify-content:center;width:100%;border:0}
+form.inq .small{font-size:13px;color:var(--muted)}
+.status{grid-column:1/-1;display:none;border-radius:14px;padding:16px;font-size:15px}
+.status.ok{display:block;background:#E7F8EE;color:#11643A}
+.status.err{display:block;background:var(--paper2);color:var(--ink)}
+.status.err .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.status.err .btn{width:auto;border:1.5px solid var(--ink);color:var(--ink);padding:10px 16px}
+.hp{position:absolute;left:-9999px}
+@media (max-width:980px){.cgrid{grid-template-columns:1fr}form.inq{grid-template-columns:1fr;padding:22px}}
+
+/* included */
+.inc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.inc>div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s,border-color .25s}
+.inc>div:hover{transform:translateY(-5px);border-color:var(--violet)}
+.inc .ic{font-size:26px}
+.inc h4{font-family:Archivo,sans-serif;font-stretch:112%;font-weight:800;text-transform:uppercase;font-size:18px;margin-top:20px}
+.inc p{font-size:14.5px;color:var(--muted);margin-top:6px}
+
+/* pricing */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.price{border:1.5px solid var(--ink);border-radius:28px;padding:34px;display:flex;flex-direction:column;background:var(--paper);position:relative}
+.price.feat{background:var(--violet);color:#fff;border-color:var(--violet)}
+.price .no{font-size:13px;letter-spacing:.18em;font-weight:600;opacity:.7}
+.price h3{font-family:Archivo,sans-serif;font-stretch:112%;font-weight:850;text-transform:uppercase;font-size:26px;margin:12px 0 8px;line-height:1.05}
+.price .amt{font-family:Archivo,sans-serif;font-stretch:118%;font-weight:900;font-size:58px;line-height:1;margin:18px 0 4px}
+.price .amt small{font:500 15px Inter,sans-serif;opacity:.7;margin-right:6px}
+.price ul{list-style:none;margin:22px 0 30px;display:grid;gap:10px;font-size:15.5px}
+.price li::before{content:"✓";font-weight:700;margin-right:10px;color:var(--violet)}
+.price.feat li::before{color:#fff}
+.price .btn{margin-top:auto;justify-content:center}
+.price.feat .btn{background:#fff;color:var(--violet);border-color:#fff}
+.badge{position:absolute;top:-14px;right:26px;background:#141210;color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:7px 14px;border-radius:999px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1.5px solid var(--ink)}
+.step{padding:30px 26px 10px 0;border-right:1px solid var(--line);position:relative}
+.step:not(:first-child){padding-left:26px}
+.step:last-child{border-right:0}
+.step .n{font-family:"Instrument Serif",serif;font-style:italic;font-size:64px;color:var(--violet);line-height:1}
+.step h4{font-family:Archivo,sans-serif;font-stretch:112%;font-weight:800;text-transform:uppercase;font-size:20px;margin:14px 0 8px}
+.step p{color:var(--muted);font-size:15.5px}
+
+/* faq */
+.faq{max-width:900px}
+details{border-bottom:1.5px solid var(--ink);padding:24px 0}
+details:first-of-type{border-top:1.5px solid var(--ink)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font-family:Archivo,sans-serif;font-stretch:112%;font-weight:800;text-transform:uppercase;font-size:21px}
+summary::-webkit-details-marker{display:none}
+summary .pm{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:Inter;font-weight:500;transition:transform .3s,background .3s}
+details[open] summary .pm{transform:rotate(45deg);background:var(--violet);border-color:var(--violet);color:#fff}
+details p{color:var(--muted);margin-top:14px;max-width:720px}
+
+/* contact */
+.contact{background:var(--violet);color:#fff;border-radius:34px;margin:0 28px;padding:90px 56px;text-align:center;position:relative;overflow:hidden}
+.contact h2{font-size:clamp(46px,8vw,120px)}
+.contact h2 .serif{color:var(--lilac)}
+.contact p{font-size:19px;max-width:560px;margin:24px auto 36px;opacity:.9}
+.contact .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.contact .btn{border-color:#fff;color:#fff}
+.contact .btn.solid{background:#fff;color:var(--violet)}
+.contact .url{margin-top:22px;font-size:14px;opacity:.8}
+footer{padding:46px 0 60px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .links,nav .btn.solid{display:none}.burger{display:block}
+  .links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:var(--paper);padding:20px 28px;border-bottom:1px solid var(--line)}
+  .hero-grid,.sec-head,.ex{grid-template-columns:1fr}
+  .sec-head p{justify-self:start}
+  .stack{height:420px}
+  .grid,.prices{grid-template-columns:1fr}
+  .inc,.steps{grid-template-columns:1fr 1fr}
+  .step{border-right:0;padding-left:0!important}
+  .explorer,.contact{margin:0 12px;padding:36px 22px}
+}
+@media (max-width:560px){.pill{font-size:10px;letter-spacing:.08em;padding:8px 12px}#clock{white-space:nowrap}.card h3{font-size:20px;line-height:1.1}.inc,.steps{grid-template-columns:1fr}.stack{height:340px}.facts{gap:22px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar" aria-hidden="true"><div class="track" id="topTrack"></div></div>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">MARCELIX<b>.</b></a>
+    <div class="links" id="links">
+      <a href="#work">Work</a><a href="#explore">Brands</a><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#faq">FAQ</a>
+    </div>
+    <div class="navr">
+    <button class="tgl" id="tgl" aria-label="Switch between light and dark mode" title="Light or dark mode">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+    <a class="btn solid" href="#contact">Start a project <span class="arr">→</span></a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="pill"><span class="dot"></span>Booking new projects · New York <span id="clock">--:--</span> ET</div>
+    <div class="hero-grid">
+      <div>
+        <h1 class="display">Brands that <span class="serif">look</span> like they've been around for years.</h1>
+        <p class="lead">Marcelix Design House is the brand identity practice of Marcellina Abonyi in New York. We give small businesses a logo, colours, type, packaging and social kit that all feel like one brand, and show it on photo-realistic 3D mockups before anything goes to print.</p>
+        <div class="ctas">
+          <a class="btn violet" href="#work">See the work <span class="arr">→</span></a>
+          <a class="btn" href="#pricing">View pricing</a>
+        </div>
+        <div class="facts">
+          <div><strong>8</strong>brand identities</div>
+          <div><strong>8</strong>industries</div>
+          <div><strong>3D</strong>mockups in Blender</div>
+        </div>
+      </div>
+      <div class="stack" aria-label="Recent brand mockups">
+        <figure class="a"><img src="img/wildfizz-mock.webp" alt="Wildfizz kombucha cans"></figure>
+        <figure class="b"><img src="img/pulse-mock.webp" alt="Pulse Boxing Club punching bag and gloves"></figure>
+        <figure class="c"><img src="img/velto-mock.webp" alt="Velto branded e-bike"></figure>
+        <div class="sticker"><span>Marcelix<br>design<br>house</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div class="track" id="mq"></div></div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Selected work</div><h2 class="display">Eight brands,<br><span class="serif">eight</span> worlds</h2></div>
+      <p>Each project is a full identity system: the idea, logo, colour, type, pattern, real-world applications and a social kit. Hover a card to see it in 3D.</p>
+    </div>
+    <div class="filters" id="filters">
+      <button class="on" data-f="all">All</button>
+      <button data-f="food">Food &amp; drink</button>
+      <button data-f="life">Beauty &amp; lifestyle</button>
+      <button data-f="move">Fitness &amp; mobility</button>
+      <button data-f="prop">Property</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="note">These are self-initiated concept projects that show my process from start to finish. Full case studies live on Behance.</p>
+  </div>
+</section>
+
+<div class="explorer reveal" id="explore">
+  <div class="sec-head">
+    <div><div class="eyebrow">Brand explorer</div><h2 class="display">Inside the<br><span class="serif">systems</span></h2></div>
+    <p>Pick a brand to see its palette, typefaces and logo. Click any colour to copy the hex code.</p>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <div class="ex">
+    <div class="shot"><img id="exShot" alt=""></div>
+    <div class="info">
+      <div><h3 class="display" id="exName"></h3><div class="ind" id="exInd"></div></div>
+      <p class="idea" id="exIdea"></p>
+      <div><div class="lbl">Palette</div><div class="sw" id="exSw"></div></div>
+      <div><div class="lbl">Typefaces</div><div class="fonts" id="exFonts"></div></div>
+      <div class="logo-img"><img id="exLogo" alt=""></div>
+      <a class="btn" style="border-color:var(--onDark);color:var(--onDark);align-self:flex-start" id="exLink" href="#">Full case study on Behance <span class="arr">↗</span></a>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="mono reveal">
+      <span class="ring"></span><span class="ring two"></span>
+      <div class="eyebrow" style="color:#E4DDFF">About</div>
+      <div><div class="big">M<span class="serif">a</span>.</div><p class="tagline">Marcellina Abonyi · Founder and designer, Marcelix Design House · New York, NY</p></div>
+    </div>
+    <div class="body reveal">
+      <div class="eyebrow">Hi, I'm Marcellina</div>
+      <h2 class="display">I design brands people <span class="serif">remember</span></h2>
+      <p>I'm Marcellina Abonyi, founder and designer at Marcelix Design House in New York. I help small businesses, from coffee shops and restaurants to skincare, fitness and property brands, look as good as what they actually sell.</p>
+      <p>Every brand starts with one simple idea. A sun setting over the sea. Bubbles rising in a can. Three bowls stacked on a studio shelf. From there I build everything else around it: the logo, colours, type, packaging, stationery and social posts, so your business feels like one clear brand wherever people see it.</p>
+      <p>I also build photo-realistic 3D mockups in Blender, so you can see your brand on real products before you spend a dollar on printing.</p>
+      <div class="beliefs">
+        <div><b>Idea first</b><span>A clear story behind every mark, not just a nice shape.</span></div>
+        <div><b>One system</b><span>Everything works together, from the sign to the social post.</span></div>
+        <div><b>See it real</b><span>3D mockups show the brand in the world before you commit.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="included">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">What you get</div><h2 class="display">One brand,<br><span class="serif">everywhere</span></h2></div>
+      <p>A logo on its own is not a brand. I design the whole kit so your sign, packaging, cards and posts all look like they came from the same place.</p>
+    </div>
+    <div class="inc reveal">
+      <div><span class="ic">◐</span><div><h4>Logo system</h4><p>Main logo, mark, wordmark and versions for dark and light backgrounds.</p></div></div>
+      <div><span class="ic">◼</span><div><h4>Colour &amp; type</h4><p>A palette with HEX and RGB values, plus font pairings for headlines and body text.</p></div></div>
+      <div><span class="ic">✦</span><div><h4>Pattern &amp; graphics</h4><p>A repeatable pattern for packaging, wrapping, merch and backgrounds.</p></div></div>
+      <div><span class="ic">▤</span><div><h4>Stationery</h4><p>Business cards, letterheads, tags and menus, ready for print.</p></div></div>
+      <div><span class="ic">◇</span><div><h4>Packaging</h4><p>Labels, cans, bottles, boxes and bags that stand out on a shelf.</p></div></div>
+      <div><span class="ic">▣</span><div><h4>Social kit</h4><p>Post templates in your colours and type, so every post looks on brand.</p></div></div>
+      <div><span class="ic">⬡</span><div><h4>3D mockups</h4><p>Photo-realistic renders of your brand on real products, made in Blender.</p></div></div>
+      <div><span class="ic">☰</span><div><h4>Brand guidelines</h4><p>A simple guide that shows anyone how to use your brand the right way.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">Pricing</div><h2 class="display">Pick your<br><span class="serif">starting</span> point</h2></div>
+      <p>Three packages, all with source files. Not sure which one fits? Send me a message and I'll point you to the right one.</p>
+    </div>
+    <div class="prices reveal">
+      <div class="price">
+        <div class="no">NO. 01</div><h3>Logo Essentials</h3>
+        <div class="amt"><small>From</small>$300</div>
+        <ul><li>3 custom logo concepts</li><li>Revisions on your chosen concept</li><li>Colour and black and white versions</li><li>PNG, SVG and PDF files</li></ul>
+        <a class="btn" href="#contact">Start with a logo <span class="arr">→</span></a>
+      </div>
+      <div class="price feat">
+        <span class="badge">Most popular</span>
+        <div class="no">NO. 02</div><h3>Brand Identity Essentials</h3>
+        <div class="amt"><small>From</small>$800</div>
+        <ul><li>Logo system</li><li>Colour palette</li><li>Font pairing</li><li>Stationery design</li><li>3D mockups of your brand</li></ul>
+        <a class="btn" href="#contact">Build my brand <span class="arr">→</span></a>
+      </div>
+      <div class="price">
+        <div class="no">NO. 03</div><h3>Complete Brand Identity</h3>
+        <div class="amt"><small>From</small>$1,450</div>
+        <ul><li>Everything in Essentials</li><li>Pattern and graphic elements</li><li>Brand guidelines</li><li>Social media kit</li><li>Packaging and applications</li></ul>
+        <a class="btn" href="#contact">Get the full kit <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">How it works</div><h2 class="display">From brief to<br><span class="serif">brand</span></h2></div>
+      <p>A clear path with check-ins at every step, so there are no surprises at the end.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><div class="n">01</div><h4>Brief</h4><p>We talk about your business, your customers and what you want people to feel. You get a short written brief to approve.</p></div>
+      <div class="step"><div class="n">02</div><h4>Direction</h4><p>I research your market and present concepts with logo, colour and type, so you can see the brand as a whole.</p></div>
+      <div class="step"><div class="n">03</div><h4>Refine</h4><p>We shape your chosen direction together, then I roll it out to packaging, stationery and social.</p></div>
+      <div class="step"><div class="n">04</div><h4>Handover</h4><p>You get all source files, 3D mockups and a brand guide, ready to send to any printer or developer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div><div class="eyebrow">FAQ</div><h2 class="display">Good<br><span class="serif">questions</span></h2></div>
+      <p>The things people usually ask before we start.</p>
+    </div>
+    <div class="faq reveal">
+      <details><summary>I have no brand yet. Where do we start? <span class="pm">+</span></summary><p>With a short chat about your business, who you sell to and what makes you different. From there I recommend a package. Most new businesses start with Brand Identity Essentials.</p></details>
+      <details><summary>How do concepts and revisions work? <span class="pm">+</span></summary><p>I present a set of concepts, you pick the one that feels right, and we refine it together. The number of concepts and revision rounds depends on your package, and I confirm it before we begin.</p></details>
+      <details><summary>What files do I get? <span class="pm">+</span></summary><p>Print-ready PDF, SVG and PNG files for every logo version, your colour codes and fonts, plus the 3D mockup images to use on your website and social media.</p></details>
+      <details><summary>What are the 3D mockups? <span class="pm">+</span></summary><p>Photo-realistic renders of your brand on real products, like cans, bags, signs and business cards. They let you see the brand in the real world before you pay for printing, and they make great launch images.</p></details>
+      <details><summary>Do you work with clients outside the US? <span class="pm">+</span></summary><p>Yes. I'm based in New York and work with businesses anywhere. Everything is shared online, and calls are booked at a time that works for both of us.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="contact reveal" id="contact">
+  <div class="cgrid">
+    <div class="side">
+      <div class="eyebrow" style="color:#E4DDFF">Start a project</div>
+      <h2 class="display" style="margin-top:14px">Ready for a <span class="serif">brand</span> that fits?</h2>
+      <p>Tell me about your business and what you need. I'll reply by email with the best next step for your budget.</p>
+      <div class="direct">
+        <div class="eyebrow" style="color:#E4DDFF">Or reach me directly</div>
+        <div style="font-size:20px;font-weight:600">marcellinaabonyi@gmail.com</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" id="copyEmail" style="border-color:#fff;color:#fff;padding:11px 18px">Copy email</button>
+          <a class="btn" href="https://www.behance.net/marcellabonyi1" target="_blank" rel="noopener" style="border-color:#fff;color:#fff;padding:11px 18px">Message on Behance <span class="arr">↗</span></a>
+        </div>
+      </div>
+    </div>
+    <form class="inq" id="inq" novalidate>
+      <label>Your name<input name="name" required autocomplete="name" placeholder="Jane Smith"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email" placeholder="jane@business.com"></label>
+      <label class="full" id="otherWrap" hidden>Tell me what you need<input name="other" id="otherInput" placeholder="For example: packaging only, a rebrand, a menu, social media templates"></label>
+      <label class="full">Business name<input name="business" placeholder="What's your business called?"></label>
+      <label>What do you need?<select name="package">
+        <option>Not sure yet</option>
+        <option>Logo Essentials (from $300)</option>
+        <option>Brand Identity Essentials (from $800)</option>
+        <option>Complete Brand Identity (from $1,450)</option>
+        <option value="Other">Other (type it below)</option>
+      </select></label>
+      <label>When do you need it?<select name="timeline">
+        <option>Flexible</option><option>Within 2 weeks</option><option>Within a month</option><option>In 1 to 3 months</option>
+      </select></label>
+      <label class="full">Tell me about your business<textarea name="message" required placeholder="What you sell, who your customers are, and anything you already have (a name, colours you like, an old logo)."></textarea></label>
+      <input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="full"><button class="btn violet" type="submit" id="sendBtn">Send inquiry <span class="arr">→</span></button></div>
+      <div class="full small">Your details go only to Marcelix Design House and are used to reply to you.</div>
+      <div class="status" id="status" role="status"></div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Marcelix Design House · Brand identity by Marcellina Abonyi · New York, NY</span>
+    <span><a href="mailto:marcellinaabonyi@gmail.com">marcellinaabonyi@gmail.com</a> · <a href="https://www.behance.net/marcellabonyi1" target="_blank" rel="noopener">Behance ↗</a></span>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Copied</div>
+
+<script>
+const B="https://www.behance.net/gallery/";
+const brands=[
+ {k:"wildfizz",n:"Wildfizz",ind:"Craft kombucha",f:"food",url:"258561877/Wildfizz-Brand-Identity-for-a-Kombucha-Brand",idea:"A gut-friendly drink that refuses to be boring. A cluster of rising bubbles, a bold colour for every flavour and bouncy type that makes every can feel like a party.",pal:[["Hibiscus","#E6337A"],["Grape","#3B1F5C"],["Mango","#FFB21E"],["Mint","#2EC4A6"],["Cream","#FFF6E8"]],fonts:["Bricolage Grotesque","DM Sans"]},
+ {k:"pulse",n:"Pulse Boxing Club",ind:"Boxing gym",f:"move",url:"258561583/Pulse-Boxing-Club-Brand-Identity-for-a-Boxing-Gym",idea:"Built for people who show up when it gets hard. A heartbeat line inside a bold square, fight red and tall condensed type that hits like a headline.",pal:[["Fight Red","#E1251B"],["Black","#0D0D0D"],["Steel","#5B5F66"],["White","#FFFFFF"],["Bone","#EDEAE3"]],fonts:["Anton","Inter"]},
+ {k:"velto",n:"Velto",ind:"Electric bikes",f:"move",url:"258561749/Velto-Brand-Identity-for-an-E-Bike-Brand",idea:"Speed you can feel, built for everyday streets. A V made from three speed bars, leaning forward like a rider in motion, in asphalt black and electric volt.",pal:[["Volt","#D4FF3A"],["Asphalt","#0B0C0E"],["Graphite","#1E2125"],["Steel","#8A9099"],["Chalk","#F4F5F2"]],fonts:["Unbounded","Space Grotesk"]},
+ {k:"mareva",n:"Mareva",ind:"Seafood restaurant",f:"food",url:"258561383/Mareva-Brand-Identity-for-a-Seafood-Restaurant",idea:"Long lunches, salty air and the catch of the day. A setting sun over two waves, the view from every table on the terrace, in deep sea blue and warm sun yellow.",pal:[["Deep Sea","#0F3B5F"],["Midnight","#0A2236"],["Sun","#F2B632"],["Coral","#E0674C"],["Foam","#F4EFE6"]],fonts:["Instrument Serif","Manrope"]},
+ {k:"kiln",n:"Kiln & Co.",ind:"Ceramics studio",f:"life",url:"258561205/Kiln-Co-Brand-Identity-for-a-Ceramics-Studio",idea:"Slow craft for people who notice the little things. Three stacked bowls fresh off the wheel, chunky type and warm earth tones that feel honest and tactile.",pal:[["Terracotta","#C4612F"],["Charcoal","#231F1C"],["Clay","#E8D3BF"],["Glaze Blue","#3E6E8E"],["Bone","#F6F0E8"]],fonts:["Syne","Inter"]},
+ {k:"ember",n:"Ember & Oat",ind:"Coffee & bakery",f:"food",url:"258438927/Ember-Oat-Coffee-Bakery-Brand-Identity",idea:"A warm neighbourhood coffee and bakery brand. An oat stem inside a warm ember circle, espresso browns and soft cream that feel like the first sip of the morning.",pal:[["Espresso","#2E1D15"],["Ember","#D9622B"],["Caramel","#8A4A22"],["Oat","#E9DCC6"],["Cream","#F2E9DA"]],fonts:["Fraunces","Inter"]},
+ {k:"lume",n:"Lumé Botanics",ind:"Clean skincare",f:"life",url:"258439135/Lum-Botanics-Clean-Skincare-Brand-Identity",idea:"Calm, clean skincare made from plants. A leaf inside a soft arch, deep forest green and blush tones, with an elegant serif that feels gentle and premium.",pal:[["Forest","#22352C"],["Clay Rose","#A8654D"],["Blush","#EBCFC4"],["Ivory","#FAF6F0"]],fonts:["Cormorant Garamond","Inter"]},
+ {k:"northgate",n:"Northgate Realty",ind:"Real estate",f:"prop",url:"258439331/Northgate-Realty-Real-Estate-Brand-Identity",idea:"A real estate brand built on trust. An N inside an arched gateway, deep navy and bronze gold, and a classic serif that says established and reliable.",pal:[["Navy","#0E1E33"],["Bronze","#7A5A2E"],["Gold","#B48A52"],["White","#FFFFFF"]],fonts:["Playfair Display","Inter"]}
+];
+
+// ticker + marquee
+const tick=["Booking new projects","Brand identity for small businesses","Photo-realistic 3D mockups","Marcelix Design House","Based in New York, working worldwide","Full source files included"];
+document.getElementById('topTrack').innerHTML=[...tick,...tick,...tick,...tick].map(t=>`<span>${t}</span>`).join('');
+const inds=["Coffee","Kombucha","Skincare","Ceramics","Real estate","E-bikes","Seafood","Boxing"];
+document.getElementById('mq').innerHTML=[...inds,...inds].map((t,i)=>`<span class="${i%2?'s':''}">${t}</span><span>✦</span>`).join('');
+
+// clock
+function clock(){try{document.getElementById('clock').textContent=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'})}catch(e){}}
+clock();setInterval(clock,20000);
+
+// work grid
+const grid=document.getElementById('grid');
+grid.innerHTML=brands.map(b=>`<a class="card reveal" data-f="${b.f}" href="${B+b.url}" target="_blank" rel="noopener">
+  <div class="img"><img src="img/${b.k}-cover.webp" alt="${b.n} brand identity cover" loading="lazy"><img class="alt" src="img/${b.k}-mock.webp" alt="" loading="lazy"></div>
+  <div class="meta"><div><h3>${b.n}</h3><div class="tag">${b.ind}</div></div><span class="go">Case study</span></div></a>`).join('');
+document.getElementById('filters').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#filters button').forEach(x=>x.classList.toggle('on',x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hide',f!=='all'&&c.dataset.f!==f));
+});
+
+// explorer
+const tabs=document.getElementById('tabs');
+tabs.innerHTML=brands.map((b,i)=>`<button data-i="${i}" class="${i?'':'on'}">${b.n}</button>`).join('');
+function lum(h){const n=parseInt(h.slice(1),16);return(0.299*(n>>16)+0.587*(n>>8&255)+0.114*(n&255))/255}
+function show(i){
+  const b=brands[i];
+  const s=document.getElementById('exShot');s.style.animation='none';s.offsetHeight;s.style.animation='';
+  s.src=`img/${b.k}-mock.webp`;s.alt=b.n+' 3D mockup';
+  document.getElementById('exName').textContent=b.n;
+  document.getElementById('exInd').textContent=b.ind;
+  document.getElementById('exIdea').textContent=b.idea;
+  document.getElementById('exSw').innerHTML=b.pal.map(([n,h])=>`<button style="background:${h};color:${lum(h)>.6?'#141210':'#fff'}" data-h="${h}" title="Copy ${h}">${h}</button>`).join('');
+  document.getElementById('exFonts').innerHTML=b.fonts.map(f=>`<span>${f}</span>`).join('');
+  document.getElementById('exLogo').src=`img/${b.k}-logo.webp`;document.getElementById('exLogo').alt=b.n+' logo system';
+  document.getElementById('exLink').href=B+b.url;
+  tabs.querySelectorAll('button').forEach((x,j)=>x.classList.toggle('on',j===i));
+}
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(+b.dataset.i)});
+show(0);
+
+const toast=document.getElementById('toast');
+function say(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1600)}
+async function copy(t,msg){try{await navigator.clipboard.writeText(t);say(msg)}catch(e){say(t)}}
+document.getElementById('exSw').addEventListener('click',e=>{const b=e.target.closest('button');if(b)copy(b.dataset.h,'Copied '+b.dataset.h)});
+document.getElementById('copyEmail').addEventListener('click',()=>copy('marcellinaabonyi@gmail.com','Email copied'));
+
+// theme toggle
+document.getElementById('tgl').addEventListener('click',()=>{
+  const t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',t);
+  try{localStorage.setItem('mx-theme',t)}catch(e){}
+});
+
+// inquiry form
+const EMAIL='marcellinaabonyi@gmail.com';
+const pkg=document.querySelector('select[name=package]'),otherWrap=document.getElementById('otherWrap'),otherInput=document.getElementById('otherInput');
+pkg.addEventListener('change',()=>{const o=pkg.value==='Other';otherWrap.hidden=!o;if(o)otherInput.focus();else otherInput.value='';});
+const form=document.getElementById('inq'), st=document.getElementById('status'), sendBtn=document.getElementById('sendBtn');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const d=Object.fromEntries(new FormData(form));
+  if(d._honey)return;
+  if(d.package==='Other'){if(!d.other||!d.other.trim()){st.className='status err';st.textContent='Please type what you need in the box under the menu.';otherInput.focus();return;}d.package='Other: '+d.other.trim();}
+  st.className='status';
+  if(!d.name.trim()||!/^\S+@\S+\.\S+$/.test(d.email)||!d.message.trim()){
+    st.className='status err';st.textContent='Please add your name, a valid email and a few words about your business.';return;
+  }
+  const body=`Name: ${d.name}\nEmail: ${d.email}\nBusiness: ${d.business||'-'}\nPackage: ${d.package}\nTimeline: ${d.timeline}\n\n${d.message}`;
+  sendBtn.disabled=true;sendBtn.firstChild.textContent='Sending... ';
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/'+EMAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({name:d.name,email:d.email,business:d.business,package:d.package,timeline:d.timeline,message:d.message,_subject:'New inquiry from '+d.name+' (Marcelix Design House)',_template:'table'})});
+    const j=await r.json().catch(()=>({}));
+    if(!r.ok||j.success===false||j.success==='false')throw new Error('fail');
+    st.className='status ok';st.textContent='Thanks '+d.name.split(' ')[0]+', your inquiry was sent. You will get a reply by email.';
+    form.reset();otherWrap.hidden=true;
+  }catch(err){
+    const mail='mailto:'+EMAIL+'?subject='+encodeURIComponent('Brand identity inquiry from '+d.name)+'&body='+encodeURIComponent(body);
+    st.className='status err';
+    st.innerHTML='<b>The form could not send from this page.</b> Your message is not sent yet. Please email it instead to <b>'+EMAIL+'</b>.<div class="row"><a class="btn" id="mailIt">Open in email app</a><button type="button" class="btn" id="copyMsg">Copy my message</button></div>';
+    document.getElementById('mailIt').href=mail;
+    document.getElementById('copyMsg').onclick=()=>copy(body,'Message copied');
+  }finally{sendBtn.disabled=false;sendBtn.firstChild.textContent='Send inquiry ';}
+});
+
+// nav border + reveal
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
