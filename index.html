@@ -299,9 +299,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
         </div>
       </div>
       <div class="stack" aria-label="Recent brand mockups">
-        <figure class="a"><img src="img/wildfizz-mock.webp" alt="Wildfizz kombucha cans"></figure>
-        <figure class="b"><img src="img/pulse-mock.webp" alt="Pulse Boxing Club punching bag and gloves"></figure>
-        <figure class="c"><img src="img/velto-mock.webp" alt="Velto branded e-bike"></figure>
+        <figure class="a"><img src="wildfizz-mock.webp" alt="Wildfizz kombucha cans"></figure>
+        <figure class="b"><img src="pulse-mock.webp" alt="Pulse Boxing Club punching bag and gloves"></figure>
+        <figure class="c"><img src="velto-mock.webp" alt="Velto branded e-bike"></figure>
         <div class="sticker"><span>Marcelix<br>design<br>house</span></div>
       </div>
     </div>
@@ -522,7 +522,7 @@ clock();setInterval(clock,20000);
 // work grid
 const grid=document.getElementById('grid');
 grid.innerHTML=brands.map(b=>`<a class="card reveal" data-f="${b.f}" href="${B+b.url}" target="_blank" rel="noopener">
-  <div class="img"><img src="img/${b.k}-cover.webp" alt="${b.n} brand identity cover" loading="lazy"><img class="alt" src="img/${b.k}-mock.webp" alt="" loading="lazy"></div>
+  <div class="img"><img src="${b.k}-cover.webp" alt="${b.n} brand identity cover" loading="lazy"><img class="alt" src="${b.k}-mock.webp" alt="" loading="lazy"></div>
   <div class="meta"><div><h3>${b.n}</h3><div class="tag">${b.ind}</div></div><span class="go">Case study</span></div></a>`).join('');
 document.getElementById('filters').addEventListener('click',e=>{
   const b=e.target.closest('button');if(!b)return;
@@ -538,13 +538,13 @@ function lum(h){const n=parseInt(h.slice(1),16);return(0.299*(n>>16)+0.587*(n>>8
 function show(i){
   const b=brands[i];
   const s=document.getElementById('exShot');s.style.animation='none';s.offsetHeight;s.style.animation='';
-  s.src=`img/${b.k}-mock.webp`;s.alt=b.n+' 3D mockup';
+  s.src=`${b.k}-mock.webp`;s.alt=b.n+' 3D mockup';
   document.getElementById('exName').textContent=b.n;
   document.getElementById('exInd').textContent=b.ind;
   document.getElementById('exIdea').textContent=b.idea;
   document.getElementById('exSw').innerHTML=b.pal.map(([n,h])=>`<button style="background:${h};color:${lum(h)>.6?'#141210':'#fff'}" data-h="${h}" title="Copy ${h}">${h}</button>`).join('');
   document.getElementById('exFonts').innerHTML=b.fonts.map(f=>`<span>${f}</span>`).join('');
-  document.getElementById('exLogo').src=`img/${b.k}-logo.webp`;document.getElementById('exLogo').alt=b.n+' logo system';
+  document.getElementById('exLogo').src=`${b.k}-logo.webp`;document.getElementById('exLogo').alt=b.n+' logo system';
   document.getElementById('exLink').href=B+b.url;
   tabs.querySelectorAll('button').forEach((x,j)=>x.classList.toggle('on',j===i));
 }
